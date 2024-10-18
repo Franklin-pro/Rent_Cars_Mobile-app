@@ -11,6 +11,7 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _userNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -54,9 +55,10 @@ class _SignupState extends State<Signup> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       //user Name field
-                          TextFormField(
-                        controller: _emailController,
+                      TextFormField(
+                        controller: _userNameController,
                         decoration: InputDecoration(
+                          hintText: 'UseName',
                           suffixIcon: Icon(
                             Icons.email,
                             color: Colors.grey,
@@ -72,7 +74,7 @@ class _SignupState extends State<Signup> {
                           ),
                         ),
                         //user Name validation
-                       validator: (value) {
+                        validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please enter your valid User Name';
                           }
@@ -83,6 +85,7 @@ class _SignupState extends State<Signup> {
                       TextFormField(
                         controller: _emailController,
                         decoration: InputDecoration(
+                          hintText: 'Enter Email Address',
                           suffixIcon: Icon(
                             Icons.email,
                             color: Colors.grey,
@@ -117,6 +120,7 @@ class _SignupState extends State<Signup> {
                         controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
+                          hintText: 'Enter Strong Password',
                           suffixIcon: Icon(
                             Icons.visibility_off,
                             color: Colors.grey,
@@ -207,25 +211,24 @@ class _SignupState extends State<Signup> {
                               ),
                             ),
                             GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Login(),
-                                    ),
-                                  );
-                                },
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Horizon',
-                                    color: Colors.black,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const Login(),
                                   ),
+                                );
+                              },
+                              child: Text(
+                                "Login",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Horizon',
+                                  color: Colors.black,
                                 ),
-                              )
-                          
+                              ),
+                            )
                           ],
                         ),
                       ),
