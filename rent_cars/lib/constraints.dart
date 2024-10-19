@@ -2,6 +2,7 @@
 
 class Onboarding {
   static var primaryColor = const Color(0xff296e48);
+  static var blackColor = Colors.black54;
 
 
   static var titleOne = "hello welcome to rent car";

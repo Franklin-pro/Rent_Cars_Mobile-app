@@ -25,11 +25,11 @@ class _SignupState extends State<Signup> {
             height: double.infinity,
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-                    colors: [Onboarding.primaryColor, Colors.black])),
+                    colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)])),
             child: Padding(
               padding: const EdgeInsets.only(top: 60.0, left: 22),
               child: Text(
-                'Create Account for rent Car',
+                'Create Account',
                 style: TextStyle(
                     fontSize: 30,
                     fontFamily: 'Horizon',
@@ -60,7 +60,7 @@ class _SignupState extends State<Signup> {
                         decoration: InputDecoration(
                           hintText: 'UseName',
                           suffixIcon: Icon(
-                            Icons.email,
+                            Icons.person,
                             color: Colors.grey,
                           ),
                           label: Text(
@@ -166,19 +166,23 @@ class _SignupState extends State<Signup> {
                         width: 300,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(colors: [
-                            Onboarding.primaryColor,
-                            Colors.black,
-                          ]),
+                          gradient: LinearGradient(
+                    colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)])
                         ),
                         child: TextButton(
                           onPressed: () {
+                          
                             if (_formKey.currentState!.validate()) {
+                            
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
-                                  content: Text('Login Successful!'),
+                                  content: Text('account created Successful!'),
                                 ),
+                              
                               );
+                              Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) => const Login(),
+                                  ),);
                             }
                           },
                           child: const Text(

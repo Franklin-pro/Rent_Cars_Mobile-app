@@ -1,4 +1,6 @@
+// import 'package:CarRent/UI/models/homeScreen.dart';
 import 'package:CarRent/UI/SignUp.dart';
+import 'package:CarRent/UI/roots_page.dart';
 import 'package:CarRent/constraints.dart';
 import 'package:flutter/material.dart';
 
@@ -19,12 +21,13 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Stack(
         children: [
+
           Container(
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [Onboarding.primaryColor, Colors.black])),
+               gradient: LinearGradient(
+                    colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)])),
             child: Padding(
               padding: const EdgeInsets.only(top: 60.0, left: 22),
               child: Text(
@@ -141,10 +144,8 @@ class _LoginState extends State<Login> {
                         width: 300,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(colors: [
-                            Onboarding.primaryColor,
-                            Colors.black,
-                          ]),
+                           gradient: LinearGradient(
+                    colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)]),
                         ),
                         child: TextButton(
                           onPressed: () {
@@ -155,7 +156,11 @@ class _LoginState extends State<Login> {
                                 const SnackBar(
                                   content: Text('Login Successful!'),
                                 ),
+                                
                               );
+                              Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) => const RootPage(),
+                                  ),);
                             }
                           },
                           child: const Text(
