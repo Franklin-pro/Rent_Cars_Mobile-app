@@ -1,5 +1,5 @@
 // import 'package:CarRent/UI/models/homeScreen.dart';
-import 'package:CarRent/UI/SignUp.dart';
+import 'package:CarRent/UI/Sign_up.dart';
 import 'package:CarRent/UI/roots_page.dart';
 import 'package:CarRent/constraints.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +28,8 @@ class _LoginState extends State<Login> {
             decoration: BoxDecoration(
                gradient: LinearGradient(
                     colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)])),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 60.0, left: 22),
+            child: const Padding(
+              padding: EdgeInsets.only(top: 60.0, left: 22),
               child: Text(
                 'Welcome Again 🥰 🚙',
                 style: TextStyle(
@@ -43,7 +43,7 @@ class _LoginState extends State<Login> {
           Padding(
             padding: const EdgeInsets.only(top: 200.0),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(40),
@@ -60,7 +60,7 @@ class _LoginState extends State<Login> {
                       TextFormField(
                         controller: _emailController,
                         decoration: InputDecoration(
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.email,
                             color: Colors.grey,
                           ),
@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
                         controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.visibility_off,
                             color: Colors.grey,
                           ),
@@ -123,7 +123,7 @@ class _LoginState extends State<Login> {
                       const SizedBox(height: 20),
 
                       // Forgot Password
-                      Align(
+                      const Align(
                         alignment: Alignment.centerRight,
                         child: Text(
                           'Forgot Password?',
@@ -183,7 +183,7 @@ class _LoginState extends State<Login> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               "Don't Have an Account?",
                               style: TextStyle(
                                 fontSize: 20,
@@ -201,7 +201,7 @@ class _LoginState extends State<Login> {
                                     ),
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Sign Up",
                                   style: TextStyle(
                                     fontSize: 20,

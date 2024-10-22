@@ -26,8 +26,8 @@ class _SignupState extends State<Signup> {
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     colors: [Onboarding.primaryColor, const Color.fromARGB(255, 60, 131, 239)])),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 60.0, left: 22),
+            child: const Padding(
+              padding: EdgeInsets.only(top: 60.0, left: 22),
               child: Text(
                 'Create Account',
                 style: TextStyle(
@@ -41,7 +41,7 @@ class _SignupState extends State<Signup> {
           Padding(
             padding: const EdgeInsets.only(top: 200.0),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(40),
@@ -59,7 +59,7 @@ class _SignupState extends State<Signup> {
                         controller: _userNameController,
                         decoration: InputDecoration(
                           hintText: 'UseName',
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.person,
                             color: Colors.grey,
                           ),
@@ -86,7 +86,7 @@ class _SignupState extends State<Signup> {
                         controller: _emailController,
                         decoration: InputDecoration(
                           hintText: 'Enter Email Address',
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.email,
                             color: Colors.grey,
                           ),
@@ -121,7 +121,7 @@ class _SignupState extends State<Signup> {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: 'Enter Strong Password',
-                          suffixIcon: Icon(
+                          suffixIcon: const Icon(
                             Icons.visibility_off,
                             color: Colors.grey,
                           ),
@@ -147,7 +147,7 @@ class _SignupState extends State<Signup> {
                       ),
 
                       const SizedBox(height: 20),
-                      Align(
+                      const Align(
                         alignment: Alignment.centerRight,
                         child: Text(
                           'Forgot Password?',
@@ -205,7 +205,7 @@ class _SignupState extends State<Signup> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               "You Have an Account here?",
                               style: TextStyle(
                                 fontSize: 20,
@@ -223,7 +223,7 @@ class _SignupState extends State<Signup> {
                                   ),
                                 );
                               },
-                              child: Text(
+                              child: const Text(
                                 "Login",
                                 style: TextStyle(
                                   fontSize: 20,

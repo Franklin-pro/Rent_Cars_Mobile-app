@@ -23,7 +23,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 20),
             child: InkWell(
-              onTap: () => null, //to logic wec will update later
+              onTap: () {}, //to logic wec will update later
 
               child: const Text(
                 'Skip',
@@ -72,6 +72,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             bottom: 60,
             right: 30,
             child: Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle, color: Onboarding.primaryColor),
               child: IconButton(
                   onPressed: () {
                     setState(() {
@@ -96,9 +99,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     size: 24,
                     color: Colors.white,
                   )),
-              padding: const EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Onboarding.primaryColor),
             ),
           ),
         ],
@@ -151,7 +151,7 @@ class createPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 50, right: 20, bottom: 80),
+      padding: const EdgeInsets.only(left: 50, right: 20, bottom: 80),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -176,7 +176,7 @@ class createPage extends StatelessWidget {
           Text(
             description,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.grey, fontSize: 20, fontWeight: FontWeight.w400),
           ),
         ],

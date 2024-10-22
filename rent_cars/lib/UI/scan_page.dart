@@ -12,7 +12,7 @@ class _ScanPageState extends State<ScanPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('scan page'),
+        title: const Text('scan page'),
       ),
     );
   }

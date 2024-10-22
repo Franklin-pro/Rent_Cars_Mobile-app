@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     
-    Future.delayed(Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),
@@ -53,9 +53,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blueAccent, const Color.fromARGB(255, 224, 224, 224)],
+            colors: [Colors.blueAccent, Color.fromARGB(255, 224, 224, 224)],
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
           ),
@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
           Image.asset('assets/images/honda.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             
             // Animated text using ColorizeAnimatedText from animated_text_kit
             SizedBox(
